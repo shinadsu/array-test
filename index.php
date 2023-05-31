@@ -17,7 +17,6 @@ $data = [
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Таблица данных</title>
     <style>
         table {
             border-collapse: collapse;
