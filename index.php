@@ -12,46 +12,12 @@ $data = [
     ["internal_history_id" => "217467", "external_id" => "7612", "external_commission" => "0.0090"],
     ["internal_history_id" => "2308935", "external_id" => "6923", "external_commission" => "0.0080"],
 ];
+
+// Вывод заголовков таблицы
+printf("%-20s %-20s %-20s\n", "Internal History ID", "External ID", "External Commission");
+
+// Вывод данных
+foreach ($data as $item) {
+    printf("%-20s %-20s %-20s\n", $item["internal_history_id"], $item["external_id"], $item["external_commission"]);
+}
 ?>
-
-<!DOCTYPE html>
-<html>
-<head>
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-
-        th, td {
-            border: 1px solid black;
-            padding: 8px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-    </style>
-</head>
-<body>
-    <table>
-        <thead>
-            <tr>
-                <th>Internal History ID</th>
-                <th>External ID</th>
-                <th>External Commission</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($data as $item): ?>
-                <tr>
-                    <td><?php echo $item["internal_history_id"]; ?></td>
-                    <td><?php echo $item["external_id"]; ?></td>
-                    <td><?php echo $item["external_commission"]; ?></td>
-                </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
-</body>
-</html>
